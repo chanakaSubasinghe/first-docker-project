@@ -1,15 +1,13 @@
 FROM node:10
 
+RUN mkdir -p /usr/src/app
+
 WORKDIR /usr/src/app
 
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-
-COPY ./projects/node/package*.json ./
+COPY . .
 
 RUN npm install
 
-COPY ./projects/node .
-
 EXPOSE 8000
 
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
