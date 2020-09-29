@@ -5,6 +5,8 @@ require('./db/mongoose');
 
 const PORT = process.env.PORT || 8000;
 
+app.use(express.json());
+
 const userRoute = require('../src/routes/user');
 
 app.use(userRoute);
