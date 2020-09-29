@@ -16,10 +16,10 @@ router.post('/users', async (req, res) => {
     }
 });
 
-// read user
+// read users
 router.get('/users', async (req, res) => {
     try {
-        const user = await User.findOne({ _id: req.params.id });
+        const user = await User.find({});
 
         if (!user) {
             return res.status(404).send('Not found user');
