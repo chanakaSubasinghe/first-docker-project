@@ -6,4 +6,4 @@ services:
         ports: 
             - "8080:8000"
         volumes: 
-            - ./projects/node/:/app    
+            - ./projects/node/:/usr/src/app   
